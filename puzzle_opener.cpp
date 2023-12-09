@@ -3,14 +3,14 @@
 //
 
 #include "puzzle_opener.h"
-std::ofstream out;
-std::ifstream in;
+
+// Initializes a new instance of PuzzleOpener class
 PuzzleOpener::PuzzleOpener() {
 
 }
 
 // Opens a file of the name inputted by the user. The file is read and outputted as all lowercase
-void PuzzleOpener::openPuzzle()
+void PuzzleOpener::openPuzzle(std::ifstream& in)
 {
     char symbol;
     userOutput("What puzzle would you like to open?");

@@ -8,7 +8,7 @@
 #include <fstream>
 #include <string>
 
-
+// Opens an existing puzzle
 class PuzzleOpener {
 private:
     std::string fileName;
@@ -16,7 +16,7 @@ private:
     void closeFile(std::ifstream& in);
 public:
     PuzzleOpener();
-    void openPuzzle();
+    void openPuzzle(std::ifstream& in);
     void userOutput(std::string message);
     void userInputWord(std::string &word);
 

@@ -3,8 +3,8 @@
 //
 
 #include "puzzle_generator.h"
-std::ofstream fout;
-std::ifstream fin;
+
+// Initializes a new instance of PuzzleGenerator class
 PuzzleGenerator::PuzzleGenerator()
 {
 
@@ -12,7 +12,7 @@ PuzzleGenerator::PuzzleGenerator()
 
 // Creates the word search board, fills it with the words from the user, fills the empty spaces with random letters,
 // and outputs the board and key to the user.
-void PuzzleGenerator::createWordSearch()
+void PuzzleGenerator::createWordSearch(std::ofstream& out, std::ifstream& in)
 {
     srand(time(0));
     int maxRows, maxCols;
@@ -23,19 +23,19 @@ void PuzzleGenerator::createWordSearch()
 
     createEmptyPuzzle(wordCount, maxRows, maxCols, wordSearchLetters);
 
-    openFile(fout, "Words");
+    openFile(out, "Words");
     userOutput("Enter the words you want in the word search:");
     for(int i = 0; i < wordCount; i++)
     {
         userInputWord(word);
-        wordKey(fout, fileName, word);
-        fillWordSearch(fin, maxRows, maxCols, wordSearchLetters, word);
+        wordKey(out, fileName, word);
+        fillWordSearch(maxRows, maxCols, wordSearchLetters, word);
     }
-    closeFile(fout);
+    closeFile(out);
 
-    outputWordSearch(fin, maxRows, maxCols,  wordSearchLetters);
-    outputKey(fin);
-    saveWordSearch(fout, fin, maxRows, maxCols, wordSearchLetters);
+    outputWordSearch(in, maxRows, maxCols,  wordSearchLetters);
+    outputKey(in);
+    saveWordSearch(out, in, maxRows, maxCols, wordSearchLetters);
 }
 
 // Creates an empty word search board and then fills it with capitalized letters.
@@ -72,7 +72,7 @@ void PuzzleGenerator::wordKey(std::ofstream& out, std::string& fileName, std::st
 }
 
 // Fills the word search with words from the user
-void PuzzleGenerator::fillWordSearch(std::ifstream& in, int maxRows, int maxCols, char wordSearchLetters[][1000], std::string& word)
+void PuzzleGenerator::fillWordSearch(int maxRows, int maxCols, char wordSearchLetters[][1000], std::string& word)
 {
     srand(time(0));
     int randRow(0), randCol(0), wordLength, incrementRow, incrementCol;
@@ -163,7 +163,7 @@ void PuzzleGenerator::outputKey(std::ifstream& in)
     openFile(in,"Words");
     while(!in.eof())
     {
-        fin.get(symbol);
+        in.get(symbol);
         std::cout << symbol;
     }
     closeFile(in);
@@ -196,11 +196,11 @@ void PuzzleGenerator::saveWordSearch(std::ofstream& out, std::ifstream& in, int 
         openFile(in, "Words");
         while(!in.eof())
         {
-            fin.get(symbol);
+            in.get(symbol);
             while(!isspace(symbol) && symbol != in.eof())
             {
                 out << symbol;
-                fin.get(symbol);
+                in.get(symbol);
             }
             out << std::endl;
         }

@@ -3,19 +3,23 @@
 //
 
 #include "word_search.h"
+std::ofstream fout;
+std::ifstream fin;
 
+// Initializes a new instance of WordSearch class
 WordSearch::WordSearch()
 {
 
 }
 
-// Runs the word search
+// Runs the word search program
 void WordSearch::run(){
     Menu menu;
     PuzzleGenerator generator;
     PuzzleOpener opener;
+    PuzzleSolver solver;
     int choice;
-    bool menuAgain;
+    bool menuAgain = false;
 
     do
     {
@@ -25,11 +29,15 @@ void WordSearch::run(){
         switch (choice)
         {
             case 1:
-                generator.createWordSearch();
+                generator.createWordSearch(fout, fin);
                 menuAgain = true;
                 break;
             case 2:
-                opener.openPuzzle();
+                opener.openPuzzle(fin);
+                menuAgain = true;
+                break;
+            case 3:
+                solver.solvePuzzle(fin);
                 menuAgain = true;
                 break;
             case 4:

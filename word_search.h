@@ -7,6 +7,7 @@
 #include "menu.h"
 #include "puzzle_generator.h"
 #include "puzzle_opener.h"
+#include "puzzle_solver.h"
 
 
 // Runs the word search program

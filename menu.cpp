@@ -4,6 +4,7 @@
 
 #include "menu.h"
 
+// Initializes a new instance of Menu class
 Menu::Menu() {
 
 }
