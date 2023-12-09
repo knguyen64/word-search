@@ -73,6 +73,12 @@ build CMakeFiles/word_search.dir/puzzle_generator.cpp.o: CXX_COMPILER__word_sear
   OBJECT_DIR = CMakeFiles/word_search.dir
   OBJECT_FILE_DIR = CMakeFiles/word_search.dir
 
+build CMakeFiles/word_search.dir/puzzle_opener.cpp.o: CXX_COMPILER__word_search_unscanned_Debug /Users/kathleennguyen/CLionProjects/word_search/puzzle_opener.cpp || cmake_object_order_depends_target_word_search
+  DEP_FILE = CMakeFiles/word_search.dir/puzzle_opener.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/word_search.dir
+  OBJECT_FILE_DIR = CMakeFiles/word_search.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target word_search
@@ -81,7 +87,7 @@ build CMakeFiles/word_search.dir/puzzle_generator.cpp.o: CXX_COMPILER__word_sear
 #############################################
 # Link the executable word_search
 
-build word_search: CXX_EXECUTABLE_LINKER__word_search_Debug CMakeFiles/word_search.dir/main.cpp.o CMakeFiles/word_search.dir/word_search.cpp.o CMakeFiles/word_search.dir/menu.cpp.o CMakeFiles/word_search.dir/puzzle_generator.cpp.o
+build word_search: CXX_EXECUTABLE_LINKER__word_search_Debug CMakeFiles/word_search.dir/main.cpp.o CMakeFiles/word_search.dir/word_search.cpp.o CMakeFiles/word_search.dir/menu.cpp.o CMakeFiles/word_search.dir/puzzle_generator.cpp.o CMakeFiles/word_search.dir/puzzle_opener.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5
   OBJECT_DIR = CMakeFiles/word_search.dir
   POST_BUILD = :

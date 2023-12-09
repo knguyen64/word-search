@@ -6,6 +6,7 @@
 #define WORD_SEARCH_WORD_SEARCH_H
 #include "menu.h"
 #include "puzzle_generator.h"
+#include "puzzle_opener.h"
 
 
 // Runs the word search program

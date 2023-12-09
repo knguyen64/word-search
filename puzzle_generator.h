@@ -6,9 +6,6 @@
 #define WORD_SEARCH_PUZZLE_GENERATOR_H
 #include <iostream>
 #include <fstream>
-#include <cstdlib>
-#include <ctime>
-#include <cctype>
 #include <string>
 
 // Creates and saves a word search puzzle using input from the user

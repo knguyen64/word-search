@@ -13,6 +13,7 @@ WordSearch::WordSearch()
 void WordSearch::run(){
     Menu menu;
     PuzzleGenerator generator;
+    PuzzleOpener opener;
     int choice;
     bool menuAgain;
 
@@ -25,6 +26,10 @@ void WordSearch::run(){
         {
             case 1:
                 generator.createWordSearch();
+                menuAgain = true;
+                break;
+            case 2:
+                opener.openPuzzle();
                 menuAgain = true;
                 break;
             case 4:

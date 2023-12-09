@@ -10,4 +10,6 @@ add_executable(word_search main.cpp
         menu.h
         puzzle_generator.cpp
         puzzle_generator.h
+        puzzle_opener.cpp
+        puzzle_opener.h
 )
