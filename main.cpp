@@ -6,7 +6,7 @@
 // (3) Solve an existing puzzle
 // (4) Exit
 int main() {
-    WordSearch puzzle;
-    puzzle.run();
+    WordSearch wordSearch;
+    wordSearch.run();
     return 0;
 }

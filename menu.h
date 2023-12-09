@@ -7,7 +7,8 @@
 #include <iostream>
 #include <string>
 
-// Ouputs the menu
+// Outputs the menu to the user and prompts them to create a word search, open a word search, solve a word search,
+// or exit the program
 class Menu {
 private:
     int option;

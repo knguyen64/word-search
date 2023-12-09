@@ -12,10 +12,23 @@ WordSearch::WordSearch()
 // Runs the word search
 void WordSearch::run(){
     Menu menu;
+    PuzzleGenerator generator;
+    int choice;
     bool menuAgain;
 
     do
     {
         menu.run();
+        choice = menu.getOption();
+
+        switch (choice)
+        {
+            case 1:
+                generator.createWordSearch();
+                menuAgain = true;
+                break;
+            case 4:
+                exit(1);
+        }
     } while (menuAgain);
 }

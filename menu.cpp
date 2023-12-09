@@ -8,7 +8,7 @@ Menu::Menu() {
 
 }
 
-// Outputs word search menu
+// Outputs the menu of prompts to the user
 void Menu::run() {
     userOutput("Choose an option:");
     userOutput("(1) Create a new puzzle");
@@ -19,13 +19,13 @@ void Menu::run() {
     setOption();
 }
 
-// Outputs text
+// Outputs a message to the user
 void Menu::userOutput(std::string message)
 {
     std::cout << message << std::endl;
 }
 
-// Gets user input for option
+// Gets user input of type int for option
 void Menu::setOption() {
     std::cin >> option;
 }
