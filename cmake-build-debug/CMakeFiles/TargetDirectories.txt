@@ -1,0 +1,3 @@
+/Users/kathleennguyen/CLionProjects/word_search/cmake-build-debug/CMakeFiles/word_search.dir
+/Users/kathleennguyen/CLionProjects/word_search/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kathleennguyen/CLionProjects/word_search/cmake-build-debug/CMakeFiles/rebuild_cache.dir
